@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Add Expense</h3>
+
+<form method="POST">
+    <label>Category:</label><br>
+    <select name="category" required>
+        {% for b in budgets %}
+        <option>{{ b.category }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label>Amount:</label><br>
+    <input name="amount" type="number" step="0.01" required><br><br>
+
+    <label>Description:</label><br>
+    <input name="description"><br><br>
+
+    <label>Month (YYYY-MM):</label><br>
+    <input type="month" name="month" required><br><br>
+
+    <button class="btn" type="submit">Add Expense</button>
+</form>
+{% endblock %}

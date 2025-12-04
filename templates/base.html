@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f7f7f7;
+        }
+
+        /* Top Navigation Bar */
+        .navbar {
+            background: #333;
+            padding: 12px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Box */
+        .container {
+            width: 90%;
+            max-width: 900px;
+            background: white;
+            padding: 20px;
+            margin: 25px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        /* Buttons */
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        /* Form Inputs */
+        input, select {
+            padding: 6px;
+            margin: 6px 0;
+            width: 260px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background: #efefef;
+        }
+
+        /* Alerts */
+        .alert {
+            padding: 10px;
+            background: #ffdddd;
+            color: #900;
+            border-left: 4px solid red;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .success {
+            background: #ddffdd;
+            border-left: 4px solid green;
+            color: #060;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/add-budget">Add Budget</a>
+    <a href="/add-expense">Add Expense</a>
+    <a href="/report">Monthly Report</a>
+</div>
+
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for cat, msg in messages %}
+          <div class="alert">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
