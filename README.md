@@ -14,27 +14,28 @@ Designed to help users manage their monthly budgets, track expenses, and get ale
 7) Runs in Docker for easy setup
 
 **Folder Structure**
+
 expense_tracker/
 
-├── app.py
+    ├── app.py
 
-├── requirements.txt
+    ├── requirements.txt
 
-├── Dockerfile
+    ├── Dockerfile
 
-├── README.md
+    ├── README.md
 
-└── templates/
+    └── templates/
 
-    ├── base.html
+        ├── base.html
     
-    ├── index.html
+        ├── index.html
     
-    ├── add_budget.html
+        ├── add_budget.html
     
-    ├── add_expense.html
+        ├── add_expense.html
     
-    └── report.html
+        ├── report.html
 
 
 **Setup Instructions (Locally)**
@@ -130,6 +131,7 @@ Check that expenses and reports are correctly displayed for older months
 * HTML/CSS (Jinja2 templates)
 
 * Docker (optional for deployment)
+
 
 
 
