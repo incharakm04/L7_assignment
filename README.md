@@ -14,18 +14,18 @@ Designed to help users manage their monthly budgets, track expenses, and get ale
 7) Runs in Docker for easy setup
 
 **Folder Structure**
-expense_tracker/
-│
-├── app.py             # Main Flask application
-├── requirements.txt   # Python dependencies
-├── Dockerfile         # Docker build instructions
-├── README.md          # Project documentation
-└── templates/
-    ├── base.html
-    ├── index.html
-    ├── add_budget.html
-    ├── add_expense.html
-    └── report.html
+    expense_tracker/
+    │
+    ├── app.py             # Main Flask application
+    ├── requirements.txt   # Python dependencies
+    ├── Dockerfile         # Docker build instructions
+    ├── README.md          # Project documentation
+    └── templates/
+        ├── base.html
+        ├── index.html
+        ├── add_budget.html
+        ├── add_expense.html
+        └── report.html
 
 **Setup Instructions (Locally)**
 
@@ -105,5 +105,6 @@ Add budgets and expenses for multiple months and categories
 Check that totals are correct in reports
 
 Verify that alerts appear when 10% budget remains or budget is exceeded
+
 
 Check that expenses and reports are correctly displayed for older months
