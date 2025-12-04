@@ -15,15 +15,25 @@ Designed to help users manage their monthly budgets, track expenses, and get ale
 
 **Folder Structure**
 expense_tracker/
+
 ├── app.py
+
 ├── requirements.txt
+
 ├── Dockerfile
+
 ├── README.md
+
 └── templates/
+
     ├── base.html
+    
     ├── index.html
+    
     ├── add_budget.html
+    
     ├── add_expense.html
+    
     └── report.html
 
 
@@ -108,5 +118,18 @@ Verify that alerts appear when 10% budget remains or budget is exceeded
 
 
 Check that expenses and reports are correctly displayed for older months
+
+**Technologies Used**
+
+* Python 3.x
+
+* Flask
+
+* SQLAlchemy (SQLite)
+
+* HTML/CSS (Jinja2 templates)
+
+* Docker (optional for deployment)
+
 
 
